@@ -1,0 +1,5 @@
+﻿  Player.cpp
+C:\Temp\M2A1 Game\M2A1 Game\Entity.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Player.cpp')
+  
+  M2A1 Game.vcxproj -> C:\Temp\M2A1 Game\x64\Debug\M2A1 Game.exe
