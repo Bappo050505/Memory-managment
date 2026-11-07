@@ -12,9 +12,9 @@ protected:
 public:
 	Player(Vector2 position,int size,sf::Color color, int maxHealth, int Damage, float Speed);
 	~Player();
-	void init();
+	
 	void Attack() override;
 	void Move() override;
-	void Update() override;
+	void Update(sf::RenderWindow window) override;
 };
 

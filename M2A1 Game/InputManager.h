@@ -7,6 +7,7 @@ class InputManager
 
 
 public:
+	//input wrapper
 	bool KeyDown(sf::Keyboard::Key pressedkey);
 	
 };

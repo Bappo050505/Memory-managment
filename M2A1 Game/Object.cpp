@@ -5,7 +5,7 @@ Object::Object(Vector2 position, int size, sf::Color color) : m_position(positio
 {
 	CreateObject(position, size , color);
 }
-
+//destructor
 Object::~Object()
 {
 

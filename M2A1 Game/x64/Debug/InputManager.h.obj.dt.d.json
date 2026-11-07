@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jakub\\downloads\\memory-managment-main\\memory-managment-main\\m2a1 game\\inputmanager.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\jakub\\downloads\\memory-managment-main\\memory-managment-main\\sfml-2.6.2\\include\\sfml\\window\\keyboard.hpp",
+            "c:\\users\\jakub\\downloads\\memory-managment-main\\memory-managment-main\\sfml-2.6.2\\include\\sfml\\window\\export.hpp",
+            "c:\\users\\jakub\\downloads\\memory-managment-main\\memory-managment-main\\sfml-2.6.2\\include\\sfml\\config.hpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
