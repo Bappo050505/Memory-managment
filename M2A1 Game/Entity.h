@@ -8,6 +8,15 @@ private:
 
 	//member variables
 protected:
+	enum EntityStates
+	{
+		ALIVE,
+		MOVING,
+		DEAD
+	
+	};
+
+	EntityStates currentState;
 	int m_Maxhealth;
 	int m_Currenthealth = 0;
 	int m_Damage;
@@ -15,7 +24,7 @@ protected:
 public:
 
 	Entity(Vector2 position, int size,sf::Color color, int maxHealth, int Damage , float Speed);
-	~Entity();
+	virtual ~Entity();
 	void SetPos(float x , float y);
 	Vector2 GetPosition();
 
@@ -26,8 +35,9 @@ public:
 	void CheckCollision();
 
 	virtual void Attack();
+	bool isdead();
 
-	virtual void Update(sf::RenderWindow window);
+	virtual void Update();
 
 	int GetDamage();
 

@@ -7,6 +7,11 @@ Entity::Entity(Vector2 position, int size, sf::Color color,int maxHealth, int Da
 
 Entity::~Entity()
 {
+
+	if (m_Object != nullptr)
+	{
+		delete m_Object;
+	}
 }
 
 void Entity::SetPos(float x, float y) 
@@ -41,16 +46,42 @@ void Entity::Attack()
 {
 	
 }
+bool Entity::isdead()
+{
+	return true;;
+}
 int Entity::TakeDamage(int damagetaken)
 {
-	//simple damage code
-	m_Currenthealth = m_Currenthealth - damagetaken;
-	return m_Currenthealth;
+	//simple damage and death code
+	if (m_Currenthealth != 0)
+	{
+		m_Currenthealth = m_Currenthealth - damagetaken;
+		return m_Currenthealth;
+	}
+	else
+	{
+		currentState =DEAD;
+	}
 
 }
 
-void Entity::Update(sf::RenderWindow window)
+void Entity::Update()
 {
+
+
+	switch(currentState) 
+	{
+	case MOVING:
+		Move();
+		break;
+	case DEAD:
+		isdead();
+	}
+
+	//sets state to dead if health is <= 0
+	
+
+	
 
 }
 

@@ -1,24 +1,12 @@
 #include "Enemy.h"
 
 
-Enemy::Enemy(Vector2 position, int size, sf::Color color,int maxHealth, int Damage, float Speed) : Entity(position, size,color, maxHealth, Damage, Speed)
+Enemy::Enemy(Vector2 position, int size, sf::Color color,int maxHealth, int Damage, float Speed , Entity* target) : Entity(position, size,color, maxHealth, Damage, Speed)
 {
-
+	m_target = target;
 }
 
-Enemy::~Enemy()
-{
-	if (m_Object != nullptr)
-	{
-		delete m_Object;
-	}
-}
 
-void Enemy::SetTarget(Player* player)
-{
-	//allows for players position too be present in the enemy
-	target = player;
-}
 
 void Enemy::Attack()
 {
@@ -52,7 +40,7 @@ void Enemy::Move()
 void Enemy::Update()
 {
 
-	targetPos = target->GetPosition();
+	targetPos = m_target->GetPosition();
 	Move();
 
 }

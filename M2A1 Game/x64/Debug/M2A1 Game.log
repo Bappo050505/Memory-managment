@@ -1,10 +1,25 @@
-﻿  Entity.cpp
-C:\Users\jakub\Downloads\Memory-managment-main\Memory-managment-main\M2A1 Game\Entity.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'Entity.cpp')
+﻿  Enemy.cpp
+C:\Temp\Memory-managment\M2A1 Game\Entity.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Enemy.cpp')
   
+  Game.cpp
+C:\Temp\Memory-managment\M2A1 Game\Entity.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Game.cpp')
+  
+C:\Temp\Memory-managment\M2A1 Game\Game.cpp(78,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Player.cpp
-C:\Users\jakub\Downloads\Memory-managment-main\Memory-managment-main\M2A1 Game\Entity.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Temp\Memory-managment\M2A1 Game\Entity.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'Player.cpp')
   
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(59,35): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(59,35): warning C4244:         with
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(59,35): warning C4244:         [
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(59,35): warning C4244:             T=unsigned int
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(59,35): warning C4244:         ]
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(64,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(64,49): warning C4244:         with
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(64,49): warning C4244:         [
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(64,49): warning C4244:             T=unsigned int
+C:\Temp\Memory-managment\M2A1 Game\Player.cpp(64,49): warning C4244:         ]
   Generating Code...
-  M2A1 Game.vcxproj -> C:\Users\jakub\Downloads\Memory-managment-main\Memory-managment-main\x64\Debug\M2A1 Game.exe
+  M2A1 Game.vcxproj -> C:\Temp\Memory-managment\x64\Debug\M2A1 Game.exe

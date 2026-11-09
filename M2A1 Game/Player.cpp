@@ -1,19 +1,13 @@
 #include "Player.h"
-#include "iostream"
+#include "Screen.h"
+#include <iostream>
 
 Player::Player(Vector2 position,int size,sf::Color color, int maxHealth, int Damage, float Speed) : Entity( position,size, color,maxHealth, Damage, Speed)
 {
 	
 }
 
-Player::~Player()
-{
-	if (m_Object != nullptr) 
-	{
-		delete m_Object;
-	}
 
-}
 
 void Player::Attack()
 {
@@ -40,16 +34,14 @@ void Player::Move()
 	}
 
 	
-
-	
-	
-	
 	
 }
 
-void Player::Update(sf::RenderWindow window)
+void Player::Update()
 {
 	Move();
+
+	Screen::Get();
 
 	//left screen collision
 	if (m_position.x < 0.f)
@@ -62,8 +54,17 @@ void Player::Update(sf::RenderWindow window)
 		SetPos(m_position.x, 0.f);
 	}
 	//right screen collision
+	if (m_position.x > Screen::GetScreenDims().x - m_size)
+	{
+		SetPos(Screen::GetScreenDims().x-m_size, m_position.y);
+	}
 	//bottom screen collision
-
+	if (m_position.y > Screen::GetScreenDims().y- m_size)
+	{
+		SetPos(m_position.x, Screen::GetScreenDims().y-m_size);
+	}
 	m_Object->setPosition(m_position.x, m_position.y);
+
+	
 }
 

@@ -18,7 +18,7 @@ protected:
 public:
 
 	Object(Vector2 position, int size , sf::Color color);
-	~Object();
+	virtual ~Object();
 	void CreateObject(Vector2 position, int size, sf::Color color);
 	sf::RectangleShape GetObject();
 
