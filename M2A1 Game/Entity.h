@@ -27,13 +27,14 @@ public:
 	virtual ~Entity();
 	void SetPos(float x , float y);
 	Vector2 GetPosition();
+	int GetCurrentHealth();
 
 	void Die();
 	int TakeDamage(int damage);
-	//virtual functions, allows the player and enemy to ovveride as they will both be inheriting from entity
+	
 	virtual void Move();
-	void CheckCollision();
-
+	bool CheckCollision(sf::RectangleShape player, sf::RectangleShape enemy);
+	sf::RectangleShape GetRect();
 	virtual void Attack();
 	bool isdead();
 

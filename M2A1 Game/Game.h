@@ -11,6 +11,8 @@ private:
 	Player* player;
 	int entityMax = 3;
 	Entity** m_entities;
+	float TimeLeft = 30;
+	
 
 	bool levelLoaded = false;
 

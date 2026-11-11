@@ -4,13 +4,34 @@
 
 Player::Player(Vector2 position,int size,sf::Color color, int maxHealth, int Damage, float Speed) : Entity( position,size, color,maxHealth, Damage, Speed)
 {
-	
+	attack = new Object({ m_position.x , m_position.y}, 10, sf::Color::Blue);
 }
+
+
 
 
 
 void Player::Attack()
 {
+	
+	/*if (input.KeyDown(sf::Keyboard::Left)) 
+	{
+		attack = new Object({ m_position.x , m_position.y - m_size / 2 }, 10, sf::Color::Blue);
+
+		std::cout << " attacked";
+	}
+	if (input.KeyDown(sf::Keyboard::Up))
+	{
+
+	}
+	if (input.KeyDown(sf::Keyboard::Down))
+	{
+
+	}
+	if (input.KeyDown(sf::Keyboard::Right))
+	{
+
+	}*/
 
 }
 
@@ -66,5 +87,6 @@ void Player::Update()
 	m_Object->setPosition(m_position.x, m_position.y);
 
 	
+
 }
 

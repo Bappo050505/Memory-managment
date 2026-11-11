@@ -7,7 +7,7 @@
 
 //game states
 
-Game::Game()
+Game::Game() 
 {
 
 	sf::RenderWindow window(sf::VideoMode(1080, 720), "Game");
@@ -56,16 +56,30 @@ Game::Game()
 
 
 		Update();
-		
+
 		window.clear();
 
 		for (int i = 0; i < 3; i++)
 		{
 			window.draw(m_entities[i]->GetObject());
 			m_entities[i]->Update();
+			
+		}
+
+		for (int i = 1; i < entityMax; i++)
+		{
+			if (m_entities[0]->CheckCollision(m_entities[0]->GetRect(), m_entities[i]->GetRect()))
+			{
+				m_entities[0]->TakeDamage(m_entities[i]->GetDamage());
+				std::cout << m_entities[0]->GetCurrentHealth();
+				
+			}
 
 		}
+
 		window.display();
+
+		
 
 	}
 
@@ -111,10 +125,15 @@ void Game::Win()
 
 }
 
-void Game::Update()
+void Game::Update( )
 {
+	
 	if (levelLoaded) 
 	{
 		gameState = PLAYING;
+	}
+	if (m_entities[0]->isdead()) 
+	{
+		gameState = GAMEOVER;
 	}
 }

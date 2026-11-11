@@ -25,14 +25,30 @@ Vector2 Entity::GetPosition()
 	return m_position;
 }
 
-void Entity::Die()
+int Entity::GetCurrentHealth()
 {
-	//death code
+	return m_Currenthealth;
 }
 
-void Entity::CheckCollision() 
+void Entity::Die()
 {
-	//collision code here
+	currentState = DEAD;
+	
+}
+
+bool Entity::CheckCollision(sf::RectangleShape player, sf::RectangleShape enemy)
+{
+	//collision box for the enemy and player
+	sf::FloatRect hitboxPlayer = player.getGlobalBounds();
+	sf::FloatRect hitboxEnemy = enemy.getGlobalBounds();
+
+	return(hitboxPlayer.intersects(hitboxEnemy));
+
+}
+
+sf::RectangleShape Entity::GetRect()
+{
+	return *m_Object;
 }
 
 void Entity::Move()
@@ -60,7 +76,7 @@ int Entity::TakeDamage(int damagetaken)
 	}
 	else
 	{
-		currentState =DEAD;
+		Die();
 	}
 
 }

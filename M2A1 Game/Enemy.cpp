@@ -8,6 +8,11 @@ Enemy::Enemy(Vector2 position, int size, sf::Color color,int maxHealth, int Dama
 
 
 
+std::string Enemy::GetTag()
+{
+	return Tag;
+}
+
 void Enemy::Attack()
 {
 
